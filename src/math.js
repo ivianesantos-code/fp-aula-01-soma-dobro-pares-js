@@ -8,7 +8,11 @@
  * @param {Array} numeros vetor com os números desejados
  */
 function somaDobroNumerosParesFuncional(numeros){
-    // TODO: Insira seu código funcional aqui
+    // Abordagem Funcional: usa métodos encadeados que transformam os dados
+    return numeros
+        .filter(n => n % 2 === 0)      // Filtra apenas os pares
+        .map(n => n * 2)               // Dobra cada número
+        .reduce((acc, n) => acc + n, 0); // Soma tudo começando do zero
 }
 
 /**
@@ -17,7 +21,14 @@ function somaDobroNumerosParesFuncional(numeros){
  * @param {Array} numeros vetor com os números desejados
  */
 function somaDobroNumerosParesProcedural(numeros){
-    // TODO: Insira seu código estruturado aqui   
+    // Abordagem Estruturada: usa controle de fluxo manual com laço de repetição
+    let soma = 0;
+    for (let i = 0; i < numeros.length; i++) {
+        if (numeros[i] % 2 === 0) {
+            soma += numeros[i] * 2;
+        }
+    }
+    return soma;
 }
 
 export { somaDobroNumerosParesFuncional, somaDobroNumerosParesProcedural };
