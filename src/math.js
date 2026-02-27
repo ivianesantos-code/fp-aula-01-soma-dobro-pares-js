@@ -10,9 +10,9 @@
 function somaDobroNumerosParesFuncional(numeros){
     // Abordagem Funcional: usa métodos encadeados que transformam os dados
     return numeros
-        .filter(n => n % 2 === 0)      // Filtra apenas os pares
-        .map(n => n * 2)               // Dobra cada número
-        .reduce((acc, n) => acc + n, 0); // Soma tudo começando do zero
+        .filter(n => n % 2 === 0)
+        .map(n => n * 2)
+        .reduce((acc, n) => acc + n, 0);
 }
 
 /**
